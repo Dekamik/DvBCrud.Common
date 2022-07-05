@@ -4,5 +4,5 @@ namespace DvBCrud.Common.Api.Controllers;
 
 public abstract class CrudControllerBase<TModel> : ControllerBase
 {
-    protected ObjectResult Forbidden() => StatusCode(403, $"Action forbidden on {nameof(TModel)}");
+    protected ObjectResult NotAllowed(string method) => StatusCode(405, $"{method} not allowed on {typeof(TModel).Name}");
 }
