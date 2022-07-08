@@ -7,8 +7,11 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace DvBCrud.Common.Api.Swagger;
 
+/// <summary>
+/// Filter for removing disabled endpoints in Swagger UI
+/// </summary>
 [ExcludeFromCodeCoverage]
-public class SwaggerDocsFilter : IDocumentFilter
+public sealed class SwaggerDocsFilter : IDocumentFilter
 {
     public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
     {

@@ -2,7 +2,11 @@
 
 namespace DvBCrud.Common.Api.Controllers;
 
-public abstract class CrudControllerBase<TModel> : ControllerBase
+/// <summary>
+/// Internal class for shared methods.
+/// </summary>
+/// <typeparam name="TApiModel">Api model type</typeparam>
+public abstract class CrudControllerBase<TApiModel> : ControllerBase
 {
-    protected ObjectResult NotAllowed(string method) => StatusCode(405, $"{method} not allowed on {typeof(TModel).Name}");
+    protected ObjectResult NotAllowed(string method) => StatusCode(405, $"{method} not allowed on {typeof(TApiModel).Name}");
 }
