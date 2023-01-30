@@ -7,6 +7,6 @@
 /// <typeparam name="TModel">API model type</typeparam>
 public interface IMapper<TEntity, TModel>
 {
-    TModel ToModel(TEntity dataModel);
-    TEntity ToEntity(TModel apiModel);
+    TModel ToModel(TEntity entity);
+    TEntity ToEntity(TModel entity);
 }
