@@ -1,6 +1,6 @@
 ﻿namespace DvBCrud.Common.Services.Mapping;
 
-/// <inheritdoc cref="IBypassMapper{TDataModel}"/>
+/// <inheritdoc cref="IBypassMapper{TEntity}"/>
 public abstract class BypassMapper<TEntity> : IBypassMapper<TEntity>
     where TEntity : class
 {
