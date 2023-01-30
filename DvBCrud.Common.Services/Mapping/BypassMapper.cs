@@ -1,10 +1,10 @@
 ﻿namespace DvBCrud.Common.Services.Mapping;
 
 /// <inheritdoc cref="IBypassMapper{TDataModel}"/>
-public abstract class BypassMapper<TDataModel> : IBypassMapper<TDataModel>
-    where TDataModel : class
+public abstract class BypassMapper<TEntity> : IBypassMapper<TEntity>
+    where TEntity : class
 {
-    public TDataModel ToModel(TDataModel dataModel) => dataModel;
+    public TEntity ToModel(TEntity dataModel) => dataModel;
 
-    public TDataModel ToEntity(TDataModel apiModel) => apiModel;
+    public TEntity ToEntity(TEntity apiModel) => apiModel;
 }
