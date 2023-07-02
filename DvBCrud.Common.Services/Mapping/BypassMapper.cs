@@ -11,6 +11,6 @@ public abstract class BypassMapper<TEntity> : IMapper<TEntity, TEntity>
     where TEntity : class
 {
     public TEntity ToModel(TEntity entity) => entity;
-
     public TEntity ToEntity(TEntity entity) => entity;
+    public abstract void UpdateEntity(TEntity source, TEntity destination);
 }

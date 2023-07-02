@@ -9,4 +9,5 @@ public interface IMapper<TEntity, TModel>
 {
     TModel ToModel(TEntity entity);
     TEntity ToEntity(TModel entity);
+    void UpdateEntity(TEntity source, TEntity destination);
 }
